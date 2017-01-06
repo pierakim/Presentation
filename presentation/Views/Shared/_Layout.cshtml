@@ -31,7 +31,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="effectMenu" href="#ScrollToAbout">About</a>
+                    <a class="effectMenu" href="#About">About</a>
                 </li>
                 <li>
                     <a class="effectMenu" href="#ScrollToServices">Services</a>
@@ -215,6 +215,20 @@
                     return false;
                 }
             }
+        });
+    });
+
+    $(function () {
+        $('a[href="#About"]:not([href="#"])').click(function () {
+            debugger;
+            $('.effectBigTitle')
+                .each(function () {
+                    animationIntro(this, 'pulse');
+                });
+            $('.effectSmallTitle')
+                .each(function () {
+                    animationIntro(this, 'pulse');
+                });
         });
     });
 </script>
