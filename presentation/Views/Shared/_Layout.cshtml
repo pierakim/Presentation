@@ -31,16 +31,16 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="effectMenu" href="#about">About</a>
+                    <a class="effectMenu" href="#ScrollToAbout">About</a>
                 </li>
                 <li>
-                    <a class="effectMenu" href="#services">Services</a>
+                    <a class="effectMenu" href="#ScrollToServices">Services</a>
                 </li>
                 <li>
-                    <a class="effectMenu" href="#contact">Contact</a>
+                    <a class="effectMenu" href="#ScrollToContact">Contact</a>
                 </li>
                 <li>
-                    <a class="effectMenu" href="#resume">Resume</a>
+                    <a class="effectMenu" href="#">Resume</a>
                 </li>
             </ul>
         </div>
@@ -201,9 +201,10 @@
 @**********************************************@
 @*Smoothly auto scroll from section to section*@
 @**********************************************@
-@*<script>
+<script>
     $(function () {
-        $('a[href*="#"]:not([href="#"])').click(function () {
+        $('a[href*="#ScrollTo"]:not([href="#"])').click(function () {
+            debugger;
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -216,4 +217,4 @@
             }
         });
     });
-</script>*@
+</script>
