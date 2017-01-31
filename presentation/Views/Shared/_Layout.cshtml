@@ -209,7 +209,9 @@
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
+                    var header_height = $('.navbar .container').outerHeight();
                     $('html, body').animate({
+                        //scrollTop: target.offset().top - header_height
                         scrollTop: target.offset().top
                     }, 1000);
                     return false;
