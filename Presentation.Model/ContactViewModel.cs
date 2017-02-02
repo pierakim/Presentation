@@ -14,23 +14,23 @@ namespace Presentation.Model
         }
 
         [Display(Name = "ContactName")]
-        [Required]
-        [MaxLength(50, ErrorMessage = "The contact name has a maximum length of 50 characters")]
+        [Required(ErrorMessage = "A Contact name is required.")]
+        [MaxLength(50, ErrorMessage = "Contact name can not be longer than 50 characters.")]
         public string ContactName { get; set; }
 
         [Display(Name = "eMail Address")]
-        [Required(ErrorMessage = "The eMail Address is a Required field")]
-        [MaxLength(254, ErrorMessage = "The Email Address can not be longer than 254 characters")]
+        [Required(ErrorMessage = "An email address is required.")]
+        [EmailAddress(ErrorMessage = "Invalid Email Address")]
         public string ContactEmail { get; set; }
 
         [Display(Name = "Phone Number")]
-        [Required(ErrorMessage = "Phone number is a Required field")]
+        [Required(ErrorMessage = "A phone number is required.")]
         [MaxLength(10, ErrorMessage = "The phone number can not be longer than 10 characters")]
         public string ContactPhoneNumber { get; set; }
 
         [Display(Name = "Describe your project")]
-        [Required(ErrorMessage = "The description is a Required field")]
-        [MaxLength(500, ErrorMessage = "The description can not be longer than 10 characters")]
+        [Required(ErrorMessage = "A quick description of your project is required.")]
+        [MaxLength(500, ErrorMessage = "The description can not be longer than 500 characters")]
         public string ContactDescription { get; set; }
     }
 }

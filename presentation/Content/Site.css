@@ -155,7 +155,7 @@ h6 {
 
 .content-section-a {
     padding: 50px 0;
-    background-color: #f8f8f8;
+    background-color: #8EC1DA;
 }
 
 .content-section-b {
@@ -255,6 +255,9 @@ p.copyright {
     text-align: justify;
 }
 
+#process {
+    background-color: #8EC1DA
+}
 /*Left process part*/
 #process h2{
     font-size: 24px;
@@ -294,3 +297,29 @@ p.copyright {
 	background-repeat: repeat-x;
 	animation: animatedBackground 40s linear infinite;
 }
+
+#ContactForm {
+    
+    margin: 50px auto; 
+    width:50%;
+}
+
+input.input-validation-error {
+         border: 1px solid #f00; 
+         background-color: #ffb3b3;
+}
+
+textarea.input-validation-error {
+        border: 1px solid #f00; 
+        background-color: #ffb3b3;
+}
+
+select.input-validation-error {
+        border: 1px solid #f00; 
+        background-color: #ffb3b3;
+}
+
+/*.input-validation-error .field-validation-error{
+    display: block;
+    color: aqua;
+}*/
