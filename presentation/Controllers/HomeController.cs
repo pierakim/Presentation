@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web.Mvc;
 using Presentation.Model;
+using Presentation.Web.Tools;
 
 namespace Presentation.Web.Controllers
 {
@@ -25,7 +26,16 @@ namespace Presentation.Web.Controllers
                 {
                     try
                     {
-                        test = true;
+                        var contactDetail = new ContactEmail
+                        {
+                            To = model.ContactEmail,
+                            ContactName = model.ContactName,
+                            ContactPhoneNumber = model.ContactPhoneNumber,
+                            ContactDescription = model.ContactDescription
+                        };
+
+                        EmailManager.SendMail(contactDetail);
+
                     }
                     catch (Exception ex)
                     {
