@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -25,28 +26,26 @@ namespace Presentation.Web.Tools
                 Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
             };
 
+            string body;
+            //Read template
+            var path = HttpContext.Current.Server.MapPath("~/EmailTemplate/EmailTemplate.html");
+            using (var sr = new StreamReader(path))
+             {
+                body = sr.ReadToEnd();
+            }
+
+            string messageBody = string.Format(body, mail.ContactName);
+
             var mailMessage = new MailMessage
             {
                 From = fromAddress,
                 Subject = "You contacted us!",
-                Body = BodyTemplate(mail),
+                Body = messageBody,
                 IsBodyHtml = true
             };
             mailMessage.To.Add(new MailAddress(mail.To));
             mailer.Send(mailMessage);
             return true;
-        }
-
-        public static string BodyTemplate(ContactEmail mail)
-        {
-            var body = "<div> Hello " + mail.ContactName + ".<br/>" +
-                        "<div>Thanks for contacting us.</div><br/>" +
-                        "<div>We just received your message.</div><br/>" +
-                        "<div>Your message:</div><br/>" +
-                        "<div>" + mail.ContactDescription + "</div><br/>" +
-                        "<div>Your phone number:</div><br/>" +
-                        "<div>" + mail.ContactPhoneNumber + "</div><br/>";
-            return body;
         }
     }
 
