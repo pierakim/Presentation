@@ -12,6 +12,8 @@ namespace Presentation.Web.Controllers
         public ActionResult Index()
         {
             var model = new ContactViewModel();
+            //to test the modal pop up...
+            //TempData["shortMessage"] = "Thank you for contacting me!";
             if (TempData["shortMessage"] != null)
             {
                 ViewBag.ShowSuccessMessage = TempData["shortMessage"].ToString();

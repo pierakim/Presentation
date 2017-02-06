@@ -238,6 +238,7 @@
     @Html.Partial("~/Views/Home/_Contact.cshtml")
 </div>
 
+@*MODAL POPUP*@
 <div id="successModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -247,7 +248,7 @@
                     <h3>Your WebDev Agency</h3>
                 </div>
                 <div>
-                   
+
                 </div>
             </div>
             <div class="modal-body">
@@ -261,6 +262,15 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+@*SPINNER LOADING*@
+<div id="loading">
+    <div id="loadingcontent">
+        <p id="loadingspinner">
+            Currently sending your information...
+        </p>
     </div>
 </div>
 

@@ -13,7 +13,8 @@ namespace Presentation.Web
                                                 "~/Scripts/modernizr-{version}.js",
                                                 "~/Scripts/bootstrap.min.js",
                                                 "~/Scripts/jquery.validate.js",
-                                                "~/Scripts/jquery.validate.unobtrusive.js");
+                                                "~/Scripts/jquery.validate.unobtrusive.js",
+                                                "~/Scripts/spin.js");
             bundles.Add(jsBundles);
 
             //CSS Bundle
