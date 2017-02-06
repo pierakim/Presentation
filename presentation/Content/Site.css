@@ -319,7 +319,27 @@ select.input-validation-error {
         background-color: #ffb3b3;
 }
 
-/*.input-validation-error .field-validation-error{
-    display: block;
-    color: aqua;
-}*/
+/*MODAL*/
+.modal-content {
+    overflow:hidden;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+
+}
+
+.modal-header {
+    background-color: #99c0ff;
+    color: white;
+}
+
+.modal-footer {
+    background-color: #99c0ff;
+    color: white;
+}
+
+#imageresource {
+    width: 150px;
+    height: 150px;
+}
+

@@ -241,15 +241,24 @@
 <div id="successModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="text-center">
+                <div class="modal-header">
+                    <img id="imageresource" src="../Content/img/contact-us.png">
+                    <h3>Your WebDev Agency</h3>
+                </div>
+                <div>
+                   
+                </div>
+            </div>
+            <div class="modal-body">
                 <h4 id="showSuccessMessage" class="modal-title text-center">@Html.Raw(ViewBag.ShowSuccessMessage)</h4>
-                <br />
-                @*<div class="text-center">
+            </div>
+            <div class="modal-footer">
+                <div class="text-center">
                     <div class="btn-group btn-group-sm">
-                        <button type="button" class="btn btn-sm btn-default btn-raised" data-dismiss="modal">Continue</button>
-                        <a class="btn btn-sm btn-primary btn-raised" role="button" href="@ResolveUrl("~/Index")"><i class="fa fa-home"></i>&nbsp;&nbsp;&nbsp;Back to Home</a>
+                        <button type="button" class="btn btn-sm btn-primary btn-raised" data-dismiss="modal">Continue on the site...</button>
                     </div>
-                </div>*@
+                </div>
             </div>
         </div>
     </div>
