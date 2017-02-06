@@ -60,6 +60,8 @@
 
 </body>
 </html>
+
+
 @***************@
 @*Effect Script*@
 @***************@
@@ -195,6 +197,13 @@
                 .each(function() {
                     animationHover(this, 'pulse');
                 });
+        });
+</script>
+
+<script>
+    $(document).ready(function () {
+            // Show Update Success modal popup
+            if ($('#showSuccessMessage').text().length > 0) { $('#successModal').modal({ backdrop: 'static' }); }
         });
 </script>
 

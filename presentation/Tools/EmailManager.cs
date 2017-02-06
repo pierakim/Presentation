@@ -13,14 +13,14 @@ namespace Presentation.Web.Tools
         public static bool SendMail(ContactEmail mail)
         {
             var smtp = new SmtpClient();
-            var fromAddress = new MailAddress("pierakim.webdev@gmail.com", "Pierakim");
-            const string fromPassword = "webdev**01";
+            var fromAddress = new MailAddress("pierakim.webdev@gmail.com", "Pierakim");//to conf
+            const string fromPassword = "webdev**01";//to conf
 
             var mailer = new SmtpClient
             {
-                Host = "smtp.gmail.com",
-                Port = 587,
-                EnableSsl = true,
+                Host = "smtp.gmail.com",//to conf
+                Port = 587,//to conf
+                EnableSsl = true,//to conf
                 DeliveryMethod = SmtpDeliveryMethod.Network,
                 UseDefaultCredentials = false,
                 Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
@@ -34,7 +34,7 @@ namespace Presentation.Web.Tools
                 body = sr.ReadToEnd();
             }
 
-            string messageBody = string.Format(body, mail.ContactName);
+            var messageBody = string.Format(body, mail.ContactName);
 
             var mailMessage = new MailMessage
             {

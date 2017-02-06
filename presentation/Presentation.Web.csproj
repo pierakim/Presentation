@@ -142,7 +142,6 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
-    <Content Include="Content\GoogleFont\font.css" />
     <Content Include="Content\img\banner-bg.jpg" />
     <Content Include="Content\img\bg-clouds.png" />
     <Content Include="Content\img\business.png" />
@@ -221,11 +220,6 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
-    <Content Include="Content\GoogleFont\woff2\m0Shgsxo4xCSzZHO6RHWxBTbgVql8nDJpwnrE27mub0.woff2" />
-    <Content Include="Content\GoogleFont\woff2\6RfRbOG3yn4TnWVTc898ERTbgVql8nDJpwnrE27mub0.woff2" />
-    <Content Include="Content\GoogleFont\woff2\Q_Z9mv4hySLTMoMjnk_rCfesZW2xOQ-xsNqO47m55DA.woff2" />
-    <Content Include="Content\GoogleFont\woff2\yQiAaD56cjx1AooMTSghGfY6323mHUZFJMgTvxaG2iE.woff2" />
-    <Content Include="Content\GoogleFont\woff2\0dTEPzkLWceF7z0koJaX1A.woff2" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />

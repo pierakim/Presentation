@@ -238,6 +238,23 @@
     @Html.Partial("~/Views/Home/_Contact.cshtml")
 </div>
 
+<div id="successModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 id="showSuccessMessage" class="modal-title text-center">@Html.Raw(ViewBag.ShowSuccessMessage)</h4>
+                <br />
+                @*<div class="text-center">
+                    <div class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-sm btn-default btn-raised" data-dismiss="modal">Continue</button>
+                        <a class="btn btn-sm btn-primary btn-raised" role="button" href="@ResolveUrl("~/Index")"><i class="fa fa-home"></i>&nbsp;&nbsp;&nbsp;Back to Home</a>
+                    </div>
+                </div>*@
+            </div>
+        </div>
+    </div>
+</div>
+
 @*FOOTER*@
 <a name="resume"></a>
 <footer>
@@ -266,4 +283,3 @@
         </div>
     </div>
 </footer>
-

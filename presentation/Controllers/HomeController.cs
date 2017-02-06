@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.Mvc;
+using Microsoft.Ajax.Utilities;
 using Presentation.Model;
 using Presentation.Web.Tools;
 
@@ -11,7 +12,10 @@ namespace Presentation.Web.Controllers
         public ActionResult Index()
         {
             var model = new ContactViewModel();
-
+            if (TempData["shortMessage"] != null)
+            {
+                ViewBag.ShowSuccessMessage = TempData["shortMessage"].ToString();
+            }
             return View(model);
         }
 
@@ -20,12 +24,11 @@ namespace Presentation.Web.Controllers
         {
             try
             {
-                var saveError = false;
-                var test = false;
                 if (ModelState.IsValid)
                 {
                     try
                     {
+                        ViewBag.ShowSuccessMessage = string.Empty;
                         var contactDetail = new ContactEmail
                         {
                             To = model.ContactEmail,
@@ -34,12 +37,13 @@ namespace Presentation.Web.Controllers
                             ContactDescription = model.ContactDescription
                         };
 
-                        EmailManager.SendMail(contactDetail);
+                        var result = EmailManager.SendMail(contactDetail);
+                        TempData["shortMessage"] = result ? "Thank you for contacting me!" : "Arrf, something wrong happened.";
 
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
-                        saveError = true;
+                        // ignored
                     }
                 }
 
